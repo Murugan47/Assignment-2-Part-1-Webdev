@@ -1,138 +1,99 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+<head>
     <meta charset="utf-8">
-
-    <!--
-    Name: Nezar Mazraie
-    File: index.html
-    Date: February 7th 2025
-    Part 1 of Assignment 2 for web development, working on the pictures
-    -->
-
-
     <meta name="viewport" content="width=device-width">
-    <title>Mozilla splash page</title>
+    <title>Mozilla Splash Page</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    
     <style>
-      /* header and body setup */
+        html {
+            font-family: 'Open Sans', sans-serif;
+            background: url('images/pattern.png'); /* Ensure pattern.png exists in images/ */
+        }
 
-      html {
-        font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
-      }
+        body {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+        }
 
-      body {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: white;
-        position: relative;
-      }
+        header {
+            height: 150px;
+        }
 
-      /* Header styling */
+        header img {
+            width: 100px;
+            position: absolute;
+            right: 32.5px;
+            top: 32.5px;
+        }
 
-      header {
-        height: 150px;
-      }
+        h1 {
+            font-size: 50px;
+            line-height: 140px;
+            margin: 0 0 0 32.5px;
+        }
 
-      header img {
-        width: 100px;
-        position: absolute;
-        right: 32.5px;
-        top: 32.5px;
-      }
+        main {
+            background: #ccc;
+        }
 
-      h1 {
-        font-size: 50px;
-        line-height: 140px;
-        margin: 0 0 0 32.5px;
-      }
+        .further-info {
+            clear: left;
+            padding: 40px 0;
+            background: #c13832;
+            box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
+                        inset 0 -3px 2px rgba(0,0,0,0.5);
+        }
 
-      /* main section and video styling */
+        .further-info a {
+            width: 25%;
+            display: block;
+            float: left;
+        }
 
-      main {
-        background: #ccc;
-      }
+        .further-info img {
+            max-width: 100%;
+            display: block;
+        }
 
-      article {
-        padding: 20px;
-      }
-
-      h2 {
-        margin-top: 0;
-      }
-
-      p {
-        line-height: 2;
-      }
-
-      iframe {
-        float: left;
-        margin: 0 20px 20px 0;
-        max-width: 100%;
-      }
-
-      /* further info links */
-
-      .further-info {
-        clear: left;
-        padding: 40px 0;
-        background: #c13832;
-        box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
-                    inset 0 -3px 2px rgba(0,0,0,0.5);
-      }
-
-      .further-info a {
-        width: 25%;
-        display: block;
-        float: left;
-      }
-
-      .further-info img {
-        max-width: 100%;
-      }
-
-      .clearfix {
-        clear: both;
-      }
-
-      /* Red panda image */
-
-      .red-panda img {
-        display: block;
-        max-width: 100%;
-      }
+        .red-panda img {
+            display: block;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="https://www.mozilla.org/">
-            <img src="firefox-logo-120px.png" alt="Firefox Logo" srcset="firefox-logo-400px.png 400w, firefox-logo-120px.png 120w" sizes="(max-width: 600px) 120px, 400px">
+            <img src="firefox-logo-120px.png" alt="Firefox Logo">
         </a>
         <h1>Mozilla</h1>
     </header>
+    
     <main>
         <div class="content">
             <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" frameborder="0" allowfullscreen></iframe>
-            <div>
-                <h2>Rocking the free web</h2>
-                <p>Mozilla are a global community...</p>
-            </div>
-        </div>
-        <div class="further-info">
-            <a href="https://addons.mozilla.org/"><img src="firefox-addons-120px.jpg" alt="Firefox Add-ons" srcset="firefox-addons-400px.jpg 400w, firefox-addons-120px.jpg 120w" sizes="(max-width: 600px) 120px, 400px"></a>
-            <a href="https://www.mozilla.org/"><img src="mozilla-dinosaur-120px.png" alt="Mozilla Dinosaur Logo" srcset="mozilla-dinosaur-400px.png 400w, mozilla-dinosaur-120px.png 120w" sizes="(max-width: 600px) 120px, 400px"></a>
-            <a href="https://developer.mozilla.org/en-US/"><img src="mdn.svg" alt="MDN Web Docs Logo"></a>
-            <a href="https://www.mozilla.org/firefox/"><img src="firefox-logo-120px.png" alt="Firefox Browser Logo" srcset="firefox-logo-400px.png 400w, firefox-logo-120px.png 120w" sizes="(max-width: 600px) 120px, 400px"></a>
-        </div>
-        <div class="red-panda">
-            <picture>
-                <source media="(max-width: 600px)" srcset="red-panda-portrait-600px.jpg">
-                <img src="red-panda-landscape-1200px.jpg" alt="A red panda">
-            </picture>
+            <h2>Rocking the free web</h2>
+            <p>Mozilla are a global community...</p>
         </div>
 
+        <div class="further-info">
+            <a href="https://addons.mozilla.org/"><img src="firefox-addons.jpg" alt="Firefox Add-ons"></a>
+            <a href="https://www.mozilla.org/"><img src="mozilla-dinosaur-head.png" alt="Mozilla Dinosaur Logo"></a>
+            <a href="https://developer.mozilla.org/en-US/"><img src="mdn.svg" alt="MDN Web Docs Logo"></a>
+            <a href="https://www.mozilla.org/firefox/"><img src="firefox_logo-only_RGB.png" alt="Firefox Browser Logo"></a>
+        </div>
+
+        <div class="red-panda">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/red-panda.jpg">
+                <img src="images/red-panda-landscape.jpg" alt="A red panda">
+            </picture>
+        </div>
     </main>
-  </body>
+</body>
 </html>
